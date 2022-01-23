@@ -1,21 +1,21 @@
 {
   "name": "questions-answers-sb",
   "version": "1.0.0",
-  "description": "A web-scaling microservice application for a product browsing website",
+  "description": "A web-scaling microservice application for a product browsing website's Q&A section handling a 20m+ document MongoDB collection",
   "main": "index.js",
   "scripts": {
     "start-server": "nodemon server/app.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/poplin-devs/atelier-optimization/questions-answers-sb.git"
+    "url": "git+https://github.com/poplin-devs/questions-answers-sb.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/poplin-devs/atelier-optimization/questions-answers-sb#issues"
+    "url": "https://github.com/poplin-devs/questions-answers-sb#issues"
   },
-  "homepage": "https://github.com/poplin-devs/atelier-optimization/questions-answers-sb#readme",
+  "homepage": "https://github.com/poplin-devs/questions-answers-sb#readme",
   "type": "module",
   "dependencies": {
     "axios": "^0.24.0",
