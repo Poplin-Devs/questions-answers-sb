@@ -1,40 +1,12 @@
 import mongoose from 'mongoose';
-const { Schema } = mongoose;
-
-mongoose.connect('mongodb://127.0.0.1:27017/questions-answers-sb', {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-})
-  .then(() => console.log('DB is connected!'))
-  .catch(err => console.log('DB connection failed with error: ', err));
-
-const questionSchema = new Schema({
-  id: Number,
-  product_id: Number,
-  question_body: String,
-  date_written: String,
-  asker_name: String,
-  asker_email: String,
-  answers: [{
-    question_id: Number,
-    answerer_email: String,
-    answerer_name: String,
-    body: String,
-    date_written: String,
-    helpful: Number,
-    id: Number,
-    reported: Boolean,
-    answer_photos: [{ id: Number, url: String }],
-  }],
-  reported: Boolean,
-  helpful: Number
-});
+import questionSchema from './index.js';
 
 const Question = mongoose.model('question', questionSchema);
 
 const Queries = {
   getQuestions: (product_id, callback) => {
-    Question.find({ product_id: 39333 })
+    console.log('still getting here');
+    Question.find({ product_id: product_id })
       .sort({ helpful: -1 })
       .then((questions) => {
         callback(questions);
